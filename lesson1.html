@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="js/lesson1.js"></script>
+    <title>app</title>
+</head>
+<body>
+<div ng-app="app">
+    <div ng-controller="appController">
+        <h1 ng-bind="hello"></h1>
+        <h2>{{name}}</h2>
+        <input ng-model="name">
+    </div>
+</div>
+</body>
+</html>

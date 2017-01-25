@@ -1,0 +1,9 @@
+!.gitignore
+node_modules
+.svn
+.idea
+.vagrant
+.ansible
+.DS_Store
+nbproject
+
