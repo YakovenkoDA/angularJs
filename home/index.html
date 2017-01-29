@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="myApp">
+
+<div ng-controller="fullName">
+
+    First Name: <input type="text" ng-model="firstName"><br>
+    Last Name: <input type="text" ng-model="lastName"><br>
+    <br>
+    Full Name: {{firstName + " " + lastName}}
+
+</div>
+
+<div ng-controller="todoCtrl">
+
+    <h2>My Todo List</h2>
+
+    <form ng-submit="todoAdd()">
+        <input type="text" ng-model="todoInput" ng-change="validate()" size="50" placeholder="Add New">
+        <input type="submit" value="Add">
+        <p>{{validateError}}</p>
+    </form>
+
+    <br>
+    <h2>In progress</h2>
+    <ul>
+        <li ng-repeat="item in todoList track by $index">
+            <button ng-click="complete($index)">Complete</button>
+            <button ng-click="removeListItem($index, 'todo')">Remove</button>
+            {{item}}
+        </li>
+    </ul>
+    <h2>Completed</h2>
+    <ul>
+        <li ng-repeat="item in completeList track by $index">
+            <button ng-click="removeListItem($index, 'complete')">Remove</button>
+            {{item}}
+        </li>
+    </ul>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="controllers/app.js"></script>
+<script src="controllers/FullNameCtrl.js"></script>
+<script src="controllers/TodoCtrl.js"></script>
+</body>
+</html>
