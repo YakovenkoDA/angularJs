@@ -1,0 +1,20 @@
+<div class="jumbotron text-left">
+
+    <h2>Login Form</h2>
+    <div>
+        <label>eMail</label>
+        <br />
+        <input type="text" ng-model="login.email" ng-blur="login.validateEmail(login.email)">
+        <div class="text-danger">{{login.errors.email}}</div>
+        <label>Password</label>
+        <br />
+        <input type="password" ng-model="login.password"><br>
+    </div>
+
+    <div>
+        <a  class="btn btn-primary" ng-click>Sign In</a>
+        <br/>
+        <a ui-sref="signUp">Sign up</a>
+    </div>
+
+</div>

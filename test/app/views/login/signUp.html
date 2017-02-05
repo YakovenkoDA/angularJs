@@ -1,0 +1,35 @@
+<div class="jumbotron text-left">
+
+    <h2>Sign Up Form</h2>
+    <style>
+        label, label > input {
+            display: block;
+        }
+    </style>
+    <form>
+        <div>
+            <label>
+                eMail:
+                <input type="text" ng-model="login.user.email">
+            </label>
+            <label>
+                Password:
+                <input type="password" ng-model="login.user.password">
+            </label>
+
+
+            <label>
+                Confirm password:
+                <input type="password" ng-model="login.user.confirmPassword">
+            </label>
+            <label>
+                Role:
+                <input type="text" ng-model="login.user.role"><br>
+            </label>
+        </div>
+
+        <div>
+            <a class="btn btn-primary" ng-click="login.register(login.user)">Sign up</a>
+        </div>
+    </form>
+</div>

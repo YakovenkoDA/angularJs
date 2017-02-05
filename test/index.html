@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/controllers/loginController.js"></script>
+    <script src="app/controllers/userController.js"></script>
+    <script src="app/models/user.js"></script>
+    <script src="app/models/validator.js"></script>
+</head>
+
+
+<body ng-app="routerApp" ng-strict-di>
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="about">AngularUI Router</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="about">About</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a ui-sref="signIn">Sign In</a></li>
+        <li><a ui-sref="signUp">Sign Up</a></li>
+    </ul>
+</nav>
+
+
+<div class="container">
+    <div ui-view></div>
+</div>
+
+</body>
+</html>
