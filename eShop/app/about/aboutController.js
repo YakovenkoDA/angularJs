@@ -1,8 +1,8 @@
-angular.module('dirApp').controller('homeController',
+angular.module('eShop').controller('aboutController',
     [
         function () {
             this.user = {
-                name: 'Vasya',
+                name: 'petya',
                 email: 'vasya@ukr.net'
             };
             this.block = {

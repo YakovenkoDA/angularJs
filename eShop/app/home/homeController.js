@@ -1,4 +1,4 @@
-angular.module('dirApp').controller('homeController',
+angular.module('eShop').controller('homeController',
     [
         function () {
             this.user = {
